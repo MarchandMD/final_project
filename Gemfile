@@ -61,3 +61,5 @@ gem "simplecov", "~> 0.22.0"
 gem "webmock", "~> 3.18", :groups => [:test]
 
 gem "vcr", "~> 6.1", :group => :test
+
+gem "net-http", "~> 0.3.2"
