@@ -17,10 +17,21 @@ RSpec.describe "get a countries recipes" do
 
     parsed_response[:data].each do |recipe|
       expect(recipe).to be_a Hash
+      expect(recipe).to have_key :id
+      expect(recipe).to have_key :type
+      expect(recipe[:type]).to eq('recipe')
       expect(recipe).to have_key :attributes
       expect(recipe[:attributes]).to have_key :url
       expect(recipe[:attributes]).to have_key :country
       expect(recipe[:attributes]).to have_key :image
+
+      expect(recipe[:attributes]).to_not have_key :source
+      expect(recipe[:attributes]).to_not have_key :yield
+      expect(recipe[:attributes]).to_not have_key :shareAs
+      expect(recipe[:attributes]).to_not have_key :healthLabels
+      expect(recipe[:attributes]).to_not have_key :dietLabels
     end
+
+    expect(parsed_response.keys.length).to eq(1)
   end
 end
