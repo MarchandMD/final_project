@@ -14,15 +14,14 @@ Brief overview
 - If possible, include screenshots and demo videos.
 
 ### How to clone and setup application
-```
-`git clone <this repo>`
-```
 
-`cd` into the repo on your local machine
+1. `git clone <this repo>`
+2. `cd` into the repo on your local machine
+3. bundle (or `bundle install`)
+4. `rails g rspec:install`
+5. `bundle exec figaro install`
+6.
 
-```
-bundle (or `bundle install`)
-```
 
 Include any essential instructions for:
 - Getting it
@@ -32,7 +31,12 @@ Include any essential instructions for:
 
 ### Where you can get your own API keys
 
-lorem
+[Edamam API Key setup here](https://www.edamam.com/)
+You'll want the Recipes API (at the time of writing this - January 2023 - there are 4 possible APIs: Recipes, Recipe Content Management, Food, Nutrition Analysis; use the Recipes one)
+
+[Edamam API documentation here](https://developer.edamam.com/edamam-docs-recipe-api)
+
+API key can be passed in params as `app_key`; you'll also need to pass an `app_id`, which is also generated while generating an api_key. 
 
 ### Happy path endpoint usage
 
