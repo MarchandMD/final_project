@@ -6,7 +6,7 @@ RSpec.describe 'RecipeFacade' do
       country = 'Thailand'
 
       recipes = RecipeFacade.new.recipes(country)
-  
+
       expect(recipes).to be_an Array
       expect(recipes.count).to_not eq(0)
       recipes.each do |recipe|
