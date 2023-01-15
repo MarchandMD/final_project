@@ -1,9 +1,7 @@
 class CountryService
-
   def any_country
     get_url("/v2/all?fields=name").sample[:name]
   end
-
 
   def get_url(url, params = nil)
     response = conn.get(url, params)

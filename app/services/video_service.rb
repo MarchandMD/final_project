@@ -1,6 +1,6 @@
 class VideoService
-  def videos(country)
-    get_url("/youtube/v3/search", { part: 'snippet', channelId: 'UCluQ5yInbeAkkeCndNnUhpw', q: country })
+  def video(country)
+    get_url("/youtube/v3/search", { part: 'snippet', channelId: 'UCluQ5yInbeAkkeCndNnUhpw', q: country, maxResults: 1 })
   end
 
   def get_url(url, params = nil)

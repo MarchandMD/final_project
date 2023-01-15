@@ -1,27 +1,27 @@
 require 'rails_helper'
 
-describe 'VideoService' do
-  describe '#videos' do
+describe 'videoervice' do
+  describe '#video' do
     it 'returns video data', :vcr do
       # kewl code here
       country = 'Thailand'
 
-      videos = VideoService.new.videos(country)
+      video = VideoService.new.video(country)
 
-      expect(videos).to be_a Hash
-      expect(videos).to have_key :items
+      expect(video).to be_a Hash
+      expect(video).to have_key :items
 
-      expect(videos[:items]).to be_an Array
-      expect(videos[:items].count).to eq(5)
+      expect(video[:items]).to be_an Array
+      expect(video[:items].count).to eq(1)
 
-      videos[:items].each do |video|
-        expect(video).to have_key :id
-        expect(video[:id]).to be_a Hash
-        expect(video[:id]).to have_key :kind
-        expect(video[:id]).to have_key :videoId
+      video[:items].each do |vid|
+        expect(vid).to have_key :id
+        expect(vid[:id]).to be_a Hash
+        expect(vid[:id]).to have_key :kind
+        expect(vid[:id]).to have_key :videoId
 
-        expect(video).to have_key :snippet
-        expect(video[:snippet]).to have_key :title
+        expect(vid).to have_key :snippet
+        expect(vid[:snippet]).to have_key :title
       end
     end
   end
