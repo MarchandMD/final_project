@@ -2,7 +2,9 @@ class LearningResourceFacade
   def video(country)
     video_hash = video_service.video(country)[:items][0]
 
-    LearningResource.create!(country: country, video: video_hash)
+    video_obj = Video.new(video_hash)
+    
+    LearningResource.create!(country: country, video: video_obj.to_json)
   end
 
   def image_service

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'RecipeFacade' do
   describe '#recipes' do
-    it 'returns an array of Recipe objects' do
+    it 'returns an array of Recipe objects', :vcr do
       country = 'Thailand'
 
       recipes = RecipeFacade.new.recipes(country)

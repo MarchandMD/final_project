@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'RecipeService' do
   describe '#recipes' do
-    it 'grabs recipes for a country' do
+    it 'grabs recipes for a country', :vcr do
       country = 'French'
 
       recipes = RecipeService.new.recipes(country)
