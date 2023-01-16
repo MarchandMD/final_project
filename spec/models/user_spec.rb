@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 describe User, type: :model do
+
+  describe 'relationships' do
+    it { should have_many(:favorites) }
+  end
   it 'exists, with attributes' do
     attributes = {
       name: 'Name',

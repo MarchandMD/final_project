@@ -62,3 +62,5 @@ gem "webmock", "~> 3.18", group: :test
 gem "vcr", "~> 6.1", group: :test
 
 gem "net-http", "~> 0.3.2"
+
+gem "shoulda-matchers", "~> 5.3", :group => :test
