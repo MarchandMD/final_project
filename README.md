@@ -1,5 +1,9 @@
 ## Final project for Mod 3 Turing 2208 cohort: Lunch and Learn
 
+[![total downloads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
+[![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
+
 Brief overview
 
 ### Learning Goals (requested section 1)
@@ -36,7 +40,7 @@ You'll want the Recipes API (at the time of writing this - January 2023 - there 
 
 [Edamam API documentation here](https://developer.edamam.com/edamam-docs-recipe-api)
 
-API key can be passed in params as `app_key`; you'll also need to pass an `app_id`, which is also generated while generating an api_key. 
+API key can be passed in params as `app_key`; you'll also need to pass an `app_id`, which is also generated while generating an api_key.
 
 ### Happy path endpoint usage
 
