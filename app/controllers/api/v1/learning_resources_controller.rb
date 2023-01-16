@@ -1,7 +1,8 @@
 class Api::V1::LearningResourcesController < ApplicationController
   def index
-
-    learning_resource = LearningResource.create!(video: 'foo video', country: 'Thailand', images: [1, 2, 3])
-    render json: LearningResourceSerializer.new(learning_resource)
+    country = request.params[:country]
+    video = VideoFacade.new.video(country)
+    images = ImageFacade.new.images(country)
+    render json: LearningResourceSerializer.format_resources(country, video, images)
   end
 end
