@@ -19,7 +19,6 @@ class LearningResourceSerializer
                 url: image.url
               }
             end
-          
         }
       }
     }
