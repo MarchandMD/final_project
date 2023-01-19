@@ -1,39 +1,43 @@
-## Final project for Mod 3 Turing 2208 cohort: Lunch and Learn
+## Lunch and Learn - API consumption, aggregation and exposure
 
-[![total downloads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
-[![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
+I am actively seeking employment!
 
-Brief overview
+If this profile or repo looks promising, please contact me! I'd love to start a conversation: <MichaelDavidMarchand@gmail.com>
 
-### Learning Goals (requested section 1)
-- Describe very briefly but clearly what the project does.
-- State if it is out-of-the-box user-friendly, so it’s clear to the user.
-- List its most useful/innovative/noteworthy features.
-- State its goals/what problem(s) it solves.
-- Note and briefly describe any key concepts (technical, philosophical, or both) important to the user’s understanding.
-- Link to any supplementary blog posts or project main pages.
-- Note its development status.
-- Include badges.
-- If possible, include screenshots and demo videos.
+|ToC|
+|---|
+|[Learning Goals](#learning-goals)|  
+[Setup](#setup)
+[Endpoints](#endpoints)
+[API keys needed](#api-keys-needed)
+[To Do](#to-do)
 
-### How to clone and setup application
+
+## Learning Goals
+- Consumes multiple APIs and then aggregates them into JSON data and exposes them 
+- Uses APIs that require authentication
+- Serializes data into JSON using multiple techniques: Gems and hand-rolling
+- Use test-driven development as well as BDD
+- Teach OOP fundamentals such as abstraction and encapsulation
+- Access and expose YouTube resources via their publicly available API
+
+### Setup
 
 1. `git clone <this repo>`
 2. `cd` into the repo on your local machine
 3. bundle (or `bundle install`)
 4. `rails g rspec:install`
 5. `bundle exec figaro install`
-6.
 
 
-Include any essential instructions for:
-- Getting it
-- Installing It
-- Configuring It
-- Running it
+### Endpoints
 
-### Where you can get your own API keys
+- `localhost:3000/api/v1/recipes`
+- `localhost:3000/api/v1/recipes?country=<country_here>`
+- `localhost:3000/api/v1/learning_resources?country=<country_here>`
+
+
+### API keys needed
 
 [Edamam API Key setup here](https://www.edamam.com/)
 You'll want the Recipes API (at the time of writing this - January 2023 - there are 4 possible APIs: Recipes, Recipe Content Management, Food, Nutrition Analysis; use the Recipes one)
@@ -42,9 +46,13 @@ You'll want the Recipes API (at the time of writing this - January 2023 - there 
 
 API key can be passed in params as `app_key`; you'll also need to pass an `app_id`, which is also generated while generating an api_key.
 
-### Happy path endpoint usage
+### To do
 
-blah blah blah
+- record video of endpoints in action
+- record video of test suite
+- grab screenshot of wireframes
+- add remaining endpoints
+- add remaining required API documentation
 
 ### gems installed
 
@@ -58,15 +66,3 @@ blah blah blah
 - `webmock`
 - `vcr`
 
-### Contributing
-- Me!
-
-### TODO
-- Next steps
-- Features planned
-
-### Contact
-- Submit a PR and just add some comments there! Happy to meet you!
-
-### License
-the standard MIT stuff
