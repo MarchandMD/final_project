@@ -132,12 +132,14 @@ postman
 2. endpoints exposed, which can be explored with Postman are as follows:
 
    - `GET /api/v1/recipes?country=<country>`
-   - `GET /api/v1/learning_resources?country=laos`
+   - `GET /api/v1/learning_resources?country=<country>`
    - `POST /api/v1/users`
    - `POST /api/v1/favorites`
-   - `GET /api/v1/favorites?api_key=jgn983hy48thw9begh98h4539h4`
+   - `GET /api/v1/favorites?api_key=<api_key_here>`
 
 Interact with the app!
+
+Notes about the final endpoint: the api_key for a specific user is automagically generated during the creation of a user; To test that endpoint, it's suggested to create a user first and use that endpoint after favorites have been determined. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
